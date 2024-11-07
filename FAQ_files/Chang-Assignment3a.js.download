@@ -1,0 +1,13 @@
+$(function() {
+    $( "#accordion" ).accordion({
+		collapsible: true,
+		heightStyle: "content"
+	});
+});
+function increment() {
+    var num = parseFloat(document.frmCalc.txtNumber.value);
+        if (!(isNaN(num))) {
+			num++;
+            document.frmCalc.txtNumber.value = num;
+        }
+}

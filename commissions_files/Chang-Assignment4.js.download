@@ -1,0 +1,21 @@
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({
+		type: "get",
+		url: "sorry.json",
+		dataType:"json",
+		success: function(data){
+		  $("#div2").html("");
+		  $.each(data, function() {
+			$.each(this, function(key, value) {
+					$("#div2").append(
+						"<h2>" + value.name + "</h2><br>" +
+						"<p class='submit'> " + value.bio + "</p>" +
+						"<p class='submit'><a href='https://webpages.charlotte.edu/achang30/Exercise/commissions.html'>" + value.incase + "</a></p>"
+					);
+			});
+			});
+		}
+	});
+  });
+});
